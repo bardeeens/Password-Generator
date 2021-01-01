@@ -10,9 +10,9 @@ var yourPassword = ''
 
 function getPasswordCriteria() {
   var passwordLength = parseInt(
-    prompt("How long would you like the password? (8-28 characters)")
+    prompt("How long would you like the password? (8-128 characters)")
     );
-  if (passwordLength < 8 || passwordLength > 28) {
+  if (passwordLength < 8 || passwordLength > 128) {
     alert("Bad password length!");
     return getPasswordCriteria();
   } 
@@ -42,7 +42,9 @@ return masterString[Math.floor(Math.random()*masterString.length)];
 for (let i = 0; i < passwordLength; i++) {
   
  yourPassword = yourPassword + getRandomCharacter();
-  
+ var passwordText = document.querySelector("#password");
+ passwordText.value = yourPassword;
+
 }
 console.log(masterString);
 console.log(passwordLength);
@@ -70,7 +72,6 @@ console.log(yourPassword);
 // function writePassword() {
   // var password = generatePassword();
   // var passwordText = document.querySelector("#password");
-
   // passwordText.value = password;
 
 // }
