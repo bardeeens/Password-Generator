@@ -7,7 +7,7 @@ Then the user decides whether or not to use the following:
 Uppercase letters
 Lowercase letters
 Numbers
-The following symbols: !@#$%^&*()?
+The following (OWASP)symbols: !"#$%&'()*+,-./:;<>=?@\][^_{|}~
 
 In addition, if the user picks an incorrect password length, they will be notified, and the function will restart. 
 If the user does not pick at least one type of character, they will also be notified, and the function will restart. 
