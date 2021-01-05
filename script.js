@@ -6,6 +6,7 @@ var symbols = "!@#$%^&*()?"
 var passwordLength = 0
 var masterString = ''
 var yourPassword = ''
+var passwordText = document.querySelector("#password");
 
 function getPasswordCriteria() {
   var passwordLength = parseInt(
@@ -16,11 +17,16 @@ function getPasswordCriteria() {
     return getPasswordCriteria();
   }
 
-
+  alert("Just so you know, you must choose at least one type of character.")
   var usingLowercase = confirm('Are we using lowercase letters?');
   var usingUppercase = confirm('Are we using uppercase letters?');
   var usingNumbers = confirm('Are we using numbers?');
   var usingSymbols = confirm('Are we using special characters?');
+
+  if (!usingLowercase && !usingUppercase && !usingNumbers && !usingSymbols) {
+    alert("I told you you that you had to pick at least one type of character!!")
+    return getPasswordCriteria();
+  }
 
   if (usingLowercase) {
     masterString += lowerCase;
@@ -41,14 +47,15 @@ function getPasswordCriteria() {
   for (let i = 0; i < passwordLength; i++) {
 
     yourPassword = yourPassword + getRandomCharacter();
-    var passwordText = document.querySelector("#password");
     passwordText.value = yourPassword;
-
   }
+  alert("Password Generated!");
+
 }
 
-// generateBtn.addEventListener("click", getPasswordCriteria);
 
-getPasswordCriteria();
+
+generateBtn.addEventListener("click", getPasswordCriteria);
+
 
 
