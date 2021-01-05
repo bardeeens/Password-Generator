@@ -11,3 +11,4 @@ The following symbols: !@#$%^&*()?
 
 In addition, if the user picks an incorrect password length, they will be notified, and the function will restart. 
 If the user does not pick at least one type of character, they will also be notified, and the function will restart. 
+After user inputs acceptable criteria, the password is generated to the page. 

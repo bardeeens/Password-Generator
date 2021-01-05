@@ -2,7 +2,7 @@ var generateBtn = document.querySelector("#generate");
 var lowerCase = "abcdefghijklmnopqrstuvwxyz"
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var numberStr = "1234567890"
-var symbols = "!@#$%^&*()?"
+var symbols = `!"#$%&'()*+,-./:;<>=?@\][^_{|}~`
 var passwordLength = 0
 var masterString = ''
 var yourPassword = ''
